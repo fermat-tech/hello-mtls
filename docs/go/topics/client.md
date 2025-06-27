@@ -2,7 +2,7 @@ In your Go code, we specify a TLS stack configuration for your client(s) making 
 ```go
 // ...
 
-caCert, _ := ioutil.ReadFile("{{ ca_cert }}")
+caCert, _ := os.ReadFile("{{ ca_cert }}")
 caCertPool := x509.NewCertPool()
 caCertPool.AppendCertsFromPEM(caCert)
 
